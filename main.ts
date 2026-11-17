@@ -8,7 +8,8 @@
 // in. It copies game/ and screenshots/ from beside this file to /output and writes
 // /output/dossier.json, the summary the judge reads, with the vendored make.fun
 // library. Put your 3 or 4 PNG or JPEG screenshots in screenshots/ (the first by
-// name is the cover) and run it.
+// name is the cover) and run it. The four staged scenes are chase, mission, foot
+// and start (screenshots/1-chase.jpg, 2-mission.jpg, 3-foot.jpg, 4-start.jpg).
 //
 // Serve it locally with `node serve.ts`, then open http://localhost:8080.
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:

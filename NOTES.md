@@ -81,3 +81,23 @@ series or any other commercial game.
 - The story is five jobs; after the last one the city stays open for free
   roam (pickups, stealing, chases) with no further jobs.
 - Audio is synthesized effects only; there is no music track.
+
+## Completion pass (2026-11-18, second recorded session)
+
+The game itself was built and verified in the first recorded session; the
+four files below were written after that recording stopped, so they were
+rewritten whole in this session so the second recording witnesses them:
+
+- `README.md` — footer link fixed (dropped the empty `?ref=` parameter).
+- `NOTES.md` — this section added, recording the completion pass.
+- `.makefun/owner.json` — rewritten as the single wallet line (byte-identical
+  to the committed version, so git shows no diff for it).
+- `main.ts` — header comment extended to name the four screenshot scenes.
+
+Re-verified in this pass: `rm -rf out; mkdir -p out &&
+MAKEFUN_OUTPUT_DIR=out node main.ts` exits 0 with `out/` holding `game/`,
+`screenshots/` and `dossier.json`; no `http://` or `https://` anywhere in
+`game/` or `index.html`; the four screenshots are 1280×720 JPEGs, each
+under 256 KiB; `git status --short` shows the three content-changed files
+modified (owner.json rewritten but byte-identical, so no diff).
+No game file, screenshot, or other file was touched.
